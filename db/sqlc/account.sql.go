@@ -41,7 +41,7 @@ DELETE FROM accounts
 WHERE id = $1
 `
 
-func (q *Queries) DeleteAccouunt(ctx context.Context, id int64) error {
+func (q *Queries) DeleteAccount(ctx context.Context, id int64) error {
 	_, err := q.db.ExecContext(ctx, deleteAccouunt, id)
 	return err
 }
